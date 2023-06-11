@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="style.css">
+	<title>Proposal</title>
+</head>
+<body>
+	<div class="bg-img">
+	</div>
+	<div class="propo">"Will You be my code mate, my partner in syntax and in love. Together, we will creat a beautiful program that I want to run for a lifetime. Will you be my forever bug-fixer and say 'yes' to being my partner in life?"</div>
+	<div class="container">
+		<div class="love-icon"><i class="fa-sharp fa-solid fa-heart"></i></div>
+		<div class="text">Hey Girl I Just Wanna Say You Something</div>
+		<div class="btn-div">
+			<div class="btn btn1">WHAT?</div>
+			<div class="btn btn2">SO?</div>
+		</div>
+	</div>
+	<div class="elements el1"></div>
+	<div class="elements el2"></div>
+	<div class="elements el3"></div>
+	<div class="elements el4"></div>
+	<div class="elements el5"></div>
+</body>
+<script>
+	let cont = document.querySelector(".container");
+	let bd = document.querySelector("body");
+	let textS = document.querySelector(".text");
+	let btn1 = document.querySelector(".btn1");
+	let btn2 = document.querySelector(".btn2");
+	let bgImg = document.querySelector(".bg-img");
+	let proposal = document.querySelector(".propo");
+
+	let bgm = new Audio("song.mp3");
+	let sfx = new Audio("beep.mp3");
+	btn1.addEventListener("click", event =>{
+		textS.innerHTML = "मी तुझ्यावर प्रेम करतो";
+		btn1.style.display = "none";
+		btn2.style.display = "flex";
+		cont.style.animation = "popup 0.1s linear"
+		sfx.play();
+	})
+	btn2.addEventListener("click", event =>{
+		cont.style.display = "none";
+		// bd.style.background = "#e5dcf7";
+		proposal.style.display = "flex";
+		bgImg.style.display = "flex";
+		sfx.play();
+		bgm.play();
+	})
+</script>
+<script type="text/javascript" src="snowstorm.js"></script>
+</html>
